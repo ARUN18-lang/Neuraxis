@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warm paper / editorial light palette */
+  --color-bg: #fbfaf6;
+  --color-bg-2: #f1ede3;
+  --color-surface: #ffffff;
+  --color-ink: #17140f;
+  --color-muted: #6b6457;
+  --color-line: #e5dfd2;
+  --color-accent: #ff4a1c;
+  --color-accent-2: #b1411b;
+  --color-accent-soft: #ffe7dd;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --radius-xl2: 22px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    letter-spacing: -0.015em;
+    line-height: 1.02;
+  }
+  ::selection {
+    background: var(--color-accent);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .text-accent { color: var(--color-accent); }
+  .serif-italic { font-style: italic; font-weight: 500; }
+
+  .glass-light {
+    background: rgba(251, 250, 246, 0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  /* faint baseline grid for editorial structure */
+  .paper-grid {
+    background-image:
+      linear-gradient(var(--color-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+}
+
+/* Marquee */
+@keyframes scroll-x {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: scroll-x 32s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* WhatsApp pulse */
+@keyframes wa-pulse {
+  0%   { box-shadow: 0 10px 30px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.5); }
+  70%  { box-shadow: 0 10px 30px rgba(37,211,102,0.4), 0 0 0 16px rgba(37,211,102,0); }
+  100% { box-shadow: 0 10px 30px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0); }
+}
+.animate-wa-pulse {
+  animation: wa-pulse 2.6s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee, .animate-wa-pulse { animation: none; }
+}
