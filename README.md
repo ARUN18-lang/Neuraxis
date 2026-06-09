@@ -1,6 +1,6 @@
-# ZenX — Startup Landing Page
+# Neuraxis — Startup Landing Page
 
-A light, premium, **editorial** landing page for **ZenX**, an engineering-first technology studio.
+A light, premium, **editorial** landing page for **Neuraxis**, an engineering-first technology studio.
 
 Built as a modern **React + Vite + Tailwind CSS v4 + Framer Motion** app — component-based, with smooth scroll-reveal and hover animations.
 
