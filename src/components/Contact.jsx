@@ -141,8 +141,8 @@ export default function Contact() {
                 {status !== "error" && (
                   <p className="mt-3.5 text-center text-[13px] text-[var(--color-muted)]">
                     {formEnabled
-                      ? "We'll get back to you within a day."
-                      : "Your default mail app will open with the message pre-filled."}
+                      ? `Messages are delivered to ${contact.email}. We'll reply within a day.`
+                      : `Your mail app will open to send to ${contact.email}.`}
                   </p>
                 )}
               </form>

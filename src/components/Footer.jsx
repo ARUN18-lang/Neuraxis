@@ -1,4 +1,5 @@
 import { contact } from "../data/site";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -6,8 +7,8 @@ export default function Footer() {
       <div className="mx-auto max-w-[1200px]">
         <div className="flex flex-wrap items-end justify-between gap-10 border-b border-white/10 pb-12">
           <div className="max-w-sm">
-            <a href="#hero" className="font-display text-[40px] font-medium tracking-tight">
-              Zen<span className="serif-italic text-[var(--color-accent)]">X</span>
+            <a href="#hero" aria-label="Neuraxis home">
+              <Logo size="xl" variant="dark" />
             </a>
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
               Engineering-first, results-obsessed. We build end-to-end digital products that
@@ -20,7 +21,7 @@ export default function Footer() {
               <h4 className="mb-4 text-[12px] uppercase tracking-[0.18em] text-white/40">Navigate</h4>
               {[
                 ["#services", "Services"],
-                ["#why", "Why ZenX"],
+                ["#why", "Why Neuraxis"],
                 ["#team", "Team"],
                 ["#contact", "Contact"],
               ].map(([href, label]) => (
@@ -45,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap justify-between gap-3 pt-6 text-[14px] text-white/50">
-          <span>© {new Date().getFullYear()} ZenX. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Neuraxis. All rights reserved.</span>
           <span>Built with precision. Shipped with speed.</span>
         </div>
       </div>

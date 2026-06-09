@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import Logo from "./Logo";
 
 export default function Splash({ onComplete }) {
   const [count, setCount] = useState(0);
@@ -51,9 +52,8 @@ export default function Splash({ onComplete }) {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display text-[clamp(64px,16vw,180px)] font-medium leading-none tracking-[-0.03em]"
         >
-          Zen<span className="serif-italic text-[var(--color-accent)]">X</span>
+          <Logo size="lg" />
         </motion.div>
         <motion.p
           initial={{ opacity: 0 }}

@@ -1,5 +1,8 @@
 // Contact form → Web3Forms (no database).
-// Access key lives in .env as VITE_WEB3FORMS_ACCESS_KEY (never commit it).
+// Register at https://web3forms.com with neuraxistechnologies@gmail.com,
+// then add the access key to .env as VITE_WEB3FORMS_ACCESS_KEY.
+
+import { contact } from "../data/site";
 
 const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
@@ -19,10 +22,16 @@ export async function submitLead({ name, email, phone, message }) {
   formData.append("phone", phone);
   formData.append("message", message);
   formData.append("subject", `New project inquiry from ${name}`);
+  formData.append("from_name", name);
+  formData.append("replyto", email);
+  formData.append("botcheck", "");
 
   const res = await fetch("https://api.web3forms.com/submit", {
     method: "POST",
     body: formData,
+    headers: {
+      Accept: "application/json",
+    },
   });
 
   const data = await res.json();
@@ -32,3 +41,5 @@ export async function submitLead({ name, email, phone, message }) {
 
   return data;
 }
+
+export const formRecipientEmail = contact.email;

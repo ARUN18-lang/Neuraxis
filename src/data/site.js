@@ -1,10 +1,10 @@
 // ──────────────────────────────────────────────────────────────
-//  ZenX site config — EDIT YOUR CONTACT DETAILS HERE
+//  Neuraxis site config — EDIT YOUR CONTACT DETAILS HERE
 //  These are intentionally left as placeholders. Fill them in.
 // ──────────────────────────────────────────────────────────────
 export const contact = {
   // Company email shown in Contact + Footer (PLACEHOLDER — fill this in)
-  email: "arun559703@gmail.com",
+  email: "neuraxistechnologies@gmail.com",
 
   // Display phone number, e.g. "+91 98765 43210" (PLACEHOLDER — fill this in)
   phoneDisplay: "+91 93615 59703",
@@ -18,38 +18,38 @@ export const contact = {
 
 export const services = [
   {
-    icon: "🔌",
+    icon: "cpu",
     title: "Hardware & Embedded",
     desc: "From PCB design to deployment, we build the devices your idea needs — firmware to silicon.",
   },
   {
-    icon: "🌐",
+    icon: "globe",
     title: "Web Development",
     desc: "Performant, scalable web apps engineered for growth, not just launch day.",
   },
   {
-    icon: "📱",
+    icon: "smartphone",
     title: "Mobile Apps",
     desc: "Native and cross-platform apps that users actually enjoy using.",
   },
   {
-    icon: "🧠",
+    icon: "brain",
     title: "AI / ML",
     desc: "LLMs, computer vision, recommendation systems, custom model training — end to end.",
   },
   {
-    icon: "⚙️",
+    icon: "cog",
     title: "Software Automation",
     desc: "Eliminate manual work. We automate workflows, pipelines, and repetitive ops.",
   },
   {
-    icon: "🚀",
+    icon: "rocket",
     title: "End-to-End Product",
     desc: "From idea to production: design, build, ship, iterate. Full ownership.",
   },
 ];
 
-export const whyZenX = [
+export const whyNeuraxis = [
   {
     num: "01",
     title: "Small Team, Big Output",
@@ -73,18 +73,21 @@ export const team = [
     name: "Janath J",
     role: "Founder & CEO",
     tag: "Sets the vision, closes the gap between idea and impact.",
+    bio: "Leads strategy, partnerships, and delivery — turning ideas into shipped products.",
   },
   {
     initial: "A",
     name: "Arun M",
     role: "Co-founder & CTO",
     tag: "Architects the stack — from embedded firmware to AI pipelines.",
+    bio: "Owns system design and engineering across hardware, cloud, and AI.",
   },
   {
     initial: "P",
     name: "Pari",
-    role: "Core Team",
-    tag: "Turns complex builds into clean, shippable products.",
+    role: "CFO",
+    tag: "Keeps the numbers honest and the runway clear.",
+    bio: "Handles finance, operations, and commercial planning for every engagement.",
   },
 ];
 

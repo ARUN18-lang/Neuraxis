@@ -15,7 +15,7 @@ export default function Hero() {
       {/* soft accent wash, top-right */}
       <div
         className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full opacity-60 blur-[90px]"
-        style={{ background: "radial-gradient(circle, rgba(255,74,28,0.18), transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(217,119,87,0.16), transparent 70%)" }}
       />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.5] paper-grid"
@@ -53,7 +53,7 @@ export default function Hero() {
             variants={item}
             className="max-w-xl text-[clamp(17px,2.2vw,21px)] leading-relaxed text-[var(--color-muted)]"
           >
-            ZenX is a lean, high-impact studio engineering end-to-end digital products —
+            Neuraxis is a lean, high-impact studio engineering end-to-end digital products —
             hardware, web, mobile, AI/ML, and automation. Deep engineering. Real business
             outcomes. No fluff.
           </motion.p>

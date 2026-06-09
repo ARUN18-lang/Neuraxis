@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Logo from "./Logo";
 
 const links = [
   { href: "#services", label: "Services" },
-  { href: "#why", label: "Why ZenX" },
+  { href: "#why", label: "Why Neuraxis" },
   { href: "#team", label: "Team" },
   { href: "#contact", label: "Contact" },
 ];
@@ -26,8 +27,8 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6">
-        <a href="#hero" className="font-display text-[26px] font-semibold tracking-tight">
-          Zen<span className="serif-italic text-[var(--color-accent)]">X</span>
+        <a href="#hero" aria-label="Neuraxis home">
+          <Logo size="md" />
         </a>
 
         <nav className="hidden items-center gap-9 md:flex">

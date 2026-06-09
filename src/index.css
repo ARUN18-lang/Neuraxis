@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* Warm paper / editorial light palette */
-  --color-bg: #fbfaf6;
-  --color-bg-2: #f1ede3;
+  --color-bg: #f7f6f3;
+  --color-bg-2: #eeede8;
   --color-surface: #ffffff;
-  --color-ink: #17140f;
-  --color-muted: #6b6457;
-  --color-line: #e5dfd2;
-  --color-accent: #ff4a1c;
-  --color-accent-2: #b1411b;
-  --color-accent-soft: #ffe7dd;
+  --color-ink: #141413;
+  --color-muted: #6b6a68;
+  --color-line: #e4e3de;
+  --color-accent: #d97757;
+  --color-accent-2: #b85c3f;
+  --color-accent-soft: #f5e8e3;
 
-  --font-display: "Fraunces", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Inter", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "ui-monospace", "SFMono-Regular", "SF Mono", Menlo, monospace;
 
-  --radius-xl2: 22px;
+  --radius-xl2: 20px;
 }
 
 @layer base {
@@ -27,13 +27,14 @@
     color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    letter-spacing: -0.011em;
   }
   h1, h2, h3, .font-display {
     font-family: var(--font-display);
-    font-optical-sizing: auto;
-    letter-spacing: -0.015em;
-    line-height: 1.02;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
   }
   ::selection {
     background: var(--color-accent);
@@ -46,17 +47,16 @@
   .serif-italic { font-style: italic; font-weight: 500; }
 
   .glass-light {
-    background: rgba(251, 250, 246, 0.72);
-    backdrop-filter: blur(14px) saturate(140%);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    background: rgba(247, 246, 243, 0.78);
+    backdrop-filter: blur(16px) saturate(150%);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
   }
 
-  /* faint baseline grid for editorial structure */
   .paper-grid {
     background-image:
       linear-gradient(var(--color-line) 1px, transparent 1px),
       linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
-    background-size: 72px 72px;
+    background-size: 64px 64px;
   }
 }
 
@@ -83,5 +83,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee, .animate-wa-pulse { animation: none; }
+  .animate-marquee,
+  .animate-wa-pulse {
+    animation: none;
+  }
 }

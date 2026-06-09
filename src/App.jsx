@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import Services from "./components/Services";
-import WhyZenX from "./components/WhyZenX";
+import WhyNeuraxis from "./components/WhyNeuraxis";
 import Team from "./components/Team";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -32,7 +32,7 @@ export default function App() {
         <Hero />
         <Marquee />
         <Services />
-        <WhyZenX />
+        <WhyNeuraxis />
         <Team />
         <Contact />
       </main>
