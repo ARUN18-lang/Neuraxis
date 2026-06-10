@@ -59,13 +59,13 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="bg-[var(--color-bg-2)] py-28">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section id="contact" className="bg-[var(--color-bg-2)] py-20 sm:py-28">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
         <SectionHead index="(04)" eyebrow="Get In Touch" title="Let's build something that matters.">
           Tell us about your project — we usually reply within a day.
         </SectionHead>
 
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.1fr]">
+        <div className="grid grid-cols-1 items-start gap-10 sm:gap-12 lg:grid-cols-[1fr_1.1fr]">
           <Reveal className="flex flex-col">
             {channels.map((c) => (
               <a
@@ -73,24 +73,24 @@ export default function Contact() {
                 href={c.href}
                 target={c.label === "WhatsApp" ? "_blank" : undefined}
                 rel="noopener"
-                className="group flex items-center justify-between border-t border-[var(--color-line)] py-7 transition-colors last:border-b hover:text-[var(--color-accent)]"
+                className="group flex items-start justify-between gap-4 border-t border-[var(--color-line)] py-5 transition-colors last:border-b hover:text-[var(--color-accent)] sm:items-center sm:py-7"
               >
-                <span className="flex items-center gap-5">
-                  <span className="font-display text-[24px]">{c.emoji}</span>
-                  <span>
-                    <span className="block text-[13px] uppercase tracking-[0.15em] text-[var(--color-muted)]">
+                <span className="flex min-w-0 items-start gap-4 sm:items-center sm:gap-5">
+                  <span className="shrink-0 font-display text-[20px] sm:text-[24px]">{c.emoji}</span>
+                  <span className="min-w-0">
+                    <span className="block text-[12px] uppercase tracking-[0.12em] text-[var(--color-muted)] sm:text-[13px] sm:tracking-[0.15em]">
                       {c.label}
                     </span>
-                    <span className="font-display text-[22px] font-medium">{c.val}</span>
+                    <span className="font-display text-[16px] font-medium break-all sm:text-[22px] sm:break-normal">{c.val}</span>
                   </span>
                 </span>
-                <span className="transition-transform group-hover:translate-x-1.5">↗</span>
+                <span className="shrink-0 pt-1 transition-transform group-hover:translate-x-1.5 sm:pt-0">↗</span>
               </a>
             ))}
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="relative rounded-[var(--radius-xl2)] border border-[var(--color-line)] bg-[var(--color-surface)] p-8 shadow-[0_24px_60px_-30px_rgba(23,20,15,0.25)]">
+            <div className="relative rounded-[var(--radius-xl2)] border border-[var(--color-line)] bg-[var(--color-surface)] p-5 shadow-[0_24px_60px_-30px_rgba(23,20,15,0.25)] sm:p-8">
               <form onSubmit={onSubmit}>
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <div>

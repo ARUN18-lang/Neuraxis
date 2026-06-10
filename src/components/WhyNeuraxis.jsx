@@ -4,8 +4,8 @@ import { whyNeuraxis } from "../data/site";
 
 export default function WhyNeuraxis() {
   return (
-    <section id="why" className="bg-[var(--color-bg-2)] py-28">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section id="why" className="bg-[var(--color-bg-2)] py-20 sm:py-28">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6">
         <SectionHead
           index="(02)"
           eyebrow="Why Neuraxis"
