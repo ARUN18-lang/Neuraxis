@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { AnimatePresence } from "motion/react";
 import Splash from "./components/Splash";
 import Navbar from "./components/Navbar";
@@ -38,6 +39,7 @@ export default function App() {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <Analytics />
     </>
   );
 }
