@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-ink)] px-6 pb-10 pt-20 text-[var(--color-bg)]">
+    <footer className="bg-[var(--color-ink)] px-4 pb-[calc(2.5rem+env(safe-area-inset-bottom))] pt-16 text-[var(--color-bg)] sm:px-6 sm:pb-10 sm:pt-20">
       <div className="mx-auto max-w-[1200px]">
         <div className="flex flex-wrap items-end justify-between gap-10 border-b border-white/10 pb-12">
           <div className="max-w-sm">

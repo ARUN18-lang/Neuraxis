@@ -17,7 +17,7 @@ export default function Logo({
   showText = true,
 }) {
   const sizes = {
-    sm: { mark: "h-8 w-8", text: "text-[20px]" },
+    sm: { mark: "h-8 w-8", text: "text-[17px] sm:text-[20px]" },
     md: { mark: "h-9 w-9", text: "text-[22px]" },
     lg: { mark: "h-12 w-12", text: "text-[clamp(48px,12vw,120px)]" },
     xl: { mark: "h-14 w-14", text: "text-[36px]" },

@@ -65,7 +65,7 @@ function ServiceCard({ service, index, progress, total, entryX }) {
     <motion.a
       href="#contact"
       style={{ x, scale, opacity, zIndex: index + 1, transformOrigin: "left center" }}
-      className="service-stack-card group absolute inset-0 flex will-change-transform flex-col overflow-hidden rounded-[var(--radius-xl2)] border border-[var(--color-line)] bg-[var(--color-surface)] p-8 shadow-[0_32px_80px_-24px_rgba(20,20,19,0.18)] transition-[border-color,box-shadow] duration-500 hover:border-[var(--color-accent)]/35 hover:shadow-[0_40px_100px_-20px_rgba(217,119,87,0.2)] md:p-10 lg:p-12"
+      className="service-stack-card group absolute inset-0 flex will-change-transform flex-col overflow-hidden rounded-[var(--radius-xl2)] border border-[var(--color-line)] bg-[var(--color-surface)] p-5 shadow-[0_32px_80px_-24px_rgba(20,20,19,0.18)] transition-[border-color,box-shadow] duration-500 hover:border-[var(--color-accent)]/35 hover:shadow-[0_40px_100px_-20px_rgba(217,119,87,0.2)] sm:p-8 md:p-10 lg:p-12"
     >
       <div
         className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full opacity-40 blur-3xl"
@@ -73,23 +73,23 @@ function ServiceCard({ service, index, progress, total, entryX }) {
       />
       <div className="pointer-events-none absolute inset-0 rounded-[var(--radius-xl2)] bg-gradient-to-br from-[var(--color-accent)]/[0.05] via-transparent to-transparent" />
 
-      <div className="relative mb-8 flex items-start justify-between gap-6">
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[var(--color-line)] bg-[var(--color-bg)] text-[var(--color-accent)] transition-colors duration-500 group-hover:border-[var(--color-accent)]/30 group-hover:bg-[var(--color-accent-soft)] md:h-16 md:w-16">
-          <Icon size={28} strokeWidth={1.75} />
+      <div className="relative mb-5 flex items-start justify-between gap-4 sm:mb-8 sm:gap-6">
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[var(--color-line)] bg-[var(--color-bg)] text-[var(--color-accent)] transition-colors duration-500 group-hover:border-[var(--color-accent)]/30 group-hover:bg-[var(--color-accent-soft)] sm:h-14 sm:w-14 md:h-16 md:w-16">
+          <Icon size={24} strokeWidth={1.75} className="sm:h-7 sm:w-7" />
         </div>
         <span className="font-mono text-[13px] tabular-nums tracking-wider text-[var(--color-muted)]">
           {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
         </span>
       </div>
 
-      <h3 className="relative max-w-xl text-[clamp(28px,4vw,42px)] font-semibold tracking-[-0.03em] text-[var(--color-ink)]">
+      <h3 className="relative max-w-xl text-[clamp(22px,5vw,42px)] font-semibold tracking-[-0.03em] text-[var(--color-ink)]">
         {service.title}
       </h3>
-      <p className="relative mt-5 max-w-2xl flex-1 text-[clamp(16px,1.8vw,19px)] leading-relaxed text-[var(--color-muted)]">
+      <p className="relative mt-3 max-w-2xl flex-1 text-[clamp(14px,2vw,19px)] leading-relaxed text-[var(--color-muted)] sm:mt-5">
         {service.desc}
       </p>
 
-      <div className="relative mt-10 flex items-center gap-2 text-[15px] font-medium text-[var(--color-accent)]">
+      <div className="relative mt-6 flex items-center gap-2 text-[14px] font-medium text-[var(--color-accent)] sm:mt-10 sm:text-[15px]">
         <span>Start a project</span>
         <ArrowUpRight size={18} strokeWidth={2} />
       </div>
@@ -125,6 +125,7 @@ export default function Services() {
   const stackRef = useRef(null);
   const [reduceMotion, setReduceMotion] = useState(false);
   const [entryX, setEntryX] = useState(1040);
+  const [scrollVh, setScrollVh] = useState(100);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -138,12 +139,19 @@ export default function Services() {
     const el = stackRef.current;
     if (!el) return;
 
-    const update = () => setEntryX(el.offsetWidth + 48);
+    const update = () => {
+      setEntryX(el.offsetWidth + 48);
+      setScrollVh(window.innerWidth < 768 ? 85 : 100);
+    };
     update();
 
     const ro = new ResizeObserver(update);
     ro.observe(el);
-    return () => ro.disconnect();
+    window.addEventListener("resize", update);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", update);
+    };
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -170,7 +178,7 @@ export default function Services() {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1200px] px-6 pt-28">
+      <div className="relative mx-auto max-w-[1200px] px-4 pt-20 sm:px-6 sm:pt-28">
         <SectionHead index="(01)" eyebrow="What We Do" title="Full-stack engineering, end to end.">
           From silicon to software — one team that ships the whole product.
         </SectionHead>
@@ -184,7 +192,7 @@ export default function Services() {
         <div
           ref={containerRef}
           className="relative"
-          style={{ height: `${services.length * 100}vh` }}
+          style={{ height: `${services.length * scrollVh}vh` }}
         >
           <div className="sticky top-0 flex h-screen items-center overflow-hidden px-4 md:px-8">
             <div
