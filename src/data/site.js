@@ -7,13 +7,13 @@ export const contact = {
   email: "neuraxistechnologies@gmail.com",
 
   // Display phone number, e.g. "+91 98765 43210" (PLACEHOLDER — fill this in)
-  phoneDisplay: "+91 93615 59703",
+  phoneDisplay: "+91 63691 55350",
 
   // Phone number for the tel: link, digits + country code only (PLACEHOLDER)
-  phoneLink: "+919361559703",
+  phoneLink: "+916369155350",
 
   // WhatsApp number, digits only incl. country code, e.g. "919876543210" (PLACEHOLDER)
-  whatsapp: "919361559703",
+  whatsapp: "916369155350",
 };
 
 export const services = [
@@ -84,8 +84,8 @@ export const team = [
   },
   {
     initial: "P",
-    name: "Pari",
-    role: "CFO",
+    name: "Pari Jegan",
+    role: "Co-founder & CFO",
     tag: "Keeps the numbers honest and the runway clear.",
     bio: "Handles finance, operations, and commercial planning for every engagement.",
   },
