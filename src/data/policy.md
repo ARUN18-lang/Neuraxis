@@ -3,9 +3,8 @@ We sincerely thank you for choosing Neuraxis Technologies. We are committed
 to delivering reliable, innovative and high quality solutions tailored to your
 project requirements. To ensure complete transparency and establish a clear
 understanding between both parties, we request you to carefully review the
-following Terms & Conditions, Refund Policy and Payment Terms set forth by
-Neuraxis Technologies. Upon mutual acceptance, the project service agreement
-shall be executed, marking the official commencement of our collaboration.
+following Terms & Conditions set forth by Neuraxis Technologies. Upon mutual acceptance, 
+the project service agreement shall be executed, marking the official commencement of our collaboration.
 TERMS & CONDITIONS
 1. Neuraxis Technologies shall undertake the project strictly in accordance
 with the mutually agreed scope of work, deliverables, and technical
